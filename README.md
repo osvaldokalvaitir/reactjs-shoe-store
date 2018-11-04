@@ -1,13 +1,18 @@
 ## React Front
 
-This project was created in React by searching data from the Node Express API.
+This project was created in React by running CRUD in the Node Express API.
 
-Este projeto foi criado em React buscando dados da Node Express API.
+Este projeto foi criado em React executando um CRUD na Node Express API.
 
 
 ## Resumo
 
-RESUMO...
+Este projeto foi desenvolvido em React executando um CRUD na Node Express API, ou seja:
+  - Busca todos os produtos
+  - Busca somente dados de um produto selecionado
+  - Adiciona novos produtos
+  - Edita dados de produtos existentes
+  - Exclui produtos existentes
 
 
 ## Instalação e execução
@@ -99,4 +104,4 @@ Cliente HTTP baseado em promessas.
 ## APIs
 
 ### [Node Express API](https://github.com/osvaldokalvaitir/node-express-api)
-Contém informações da API do Node Express.
+Contém informações da Node Express API.
