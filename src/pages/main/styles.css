@@ -57,6 +57,11 @@
     cursor: pointer;
 }
 
+.product-list .actions .add-button {
+    text-decoration: none;
+    color: white;    
+}
+
 .product-list .actions button[disabled] {
     opacity: 0.5;
     cursor: default;

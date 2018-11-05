@@ -23,6 +23,10 @@ class Main extends Component {
         this.setState({ products: docs, productInfo, page });
     }
 
+    addProduct = () => {
+        
+    }
+
     prevPage = () => {
         const { page } = this.state;
 
@@ -48,6 +52,13 @@ class Main extends Component {
 
         return (
             <div className="product-list">
+                <div className="actions">
+                    <button>
+                        <Link to={`/products/}`} className="add-button">
+                            Adicionar
+                        </Link>
+                    </button>
+                </div>            
                 {products.map(product => (
                     <article key={product._id}>
                         <strong>{product.title}</strong>
