@@ -21,17 +21,17 @@ Depois de instalado o Node.js, abra o prompt de comando e dentro da pasta do pro
 
 Para instalar as dependências do projeto:
 ```
-npm install
+npm install | yarn install
 ```
 
 Executar o projeto localmente:
 ```
-npm start
+npm start | yarn start
 ```
 
 Construir e executar o projeto:
 ```
-npm run build
+npm run build | yarn run build
 ```
 
 
