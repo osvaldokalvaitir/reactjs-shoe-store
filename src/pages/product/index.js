@@ -65,7 +65,7 @@ class Product extends Component {
         const { _id } = this.state.product;
 
         try {
-            const response = await api.delete(`/products/${_id}`);
+            await api.delete(`/products/${_id}`);
             this.props.history.push("/");            
         }
         catch(err) {
@@ -94,19 +94,19 @@ class Product extends Component {
                     <label>
                         <p>Tamanho</p>
                         <input type="text" name="size" value={size} onChange={this.handleChange} />
-                    </label>
-                    <div className="actions">
-                        <button type="submit" onClick={this.handleSubmit}>
-                            Salvar dados
-                        </button>
-                        { (_id !== '') 
-                            ? <button onClick={this.deleteProduct}>
-                                Excluir produto
-                              </button>
-                            : null
-                        }                         
-                    </div>
+                    </label>                    
                 </form>
+                <div className="actions">
+                    <button type="submit" onClick={this.handleSubmit}>
+                        Salvar dados
+                    </button>
+                    { (_id) 
+                        ? <button onClick={this.deleteProduct}>
+                            Excluir produto
+                          </button>
+                        : null
+                    }                         
+                </div>
             </div>
         );
     }

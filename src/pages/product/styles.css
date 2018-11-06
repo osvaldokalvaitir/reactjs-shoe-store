@@ -16,7 +16,6 @@
     color: #666;
     font-size: 14px;
     line-height: 24px;
-    margin-top: 10px;
 }
 
 .product-info input {
@@ -24,6 +23,7 @@
     font-size: 18px;
     line-height: 24px;
     width: 100%;
+    margin-bottom: 10px;    
 }
 
 .product-info .actions {
