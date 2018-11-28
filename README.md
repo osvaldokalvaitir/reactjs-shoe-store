@@ -33,8 +33,6 @@ Este projeto foi desenvolvido em React executando um CRUD na Node Express API, o
 
   - [Bibliotecas do Node.js](#bibliotecas-do-nodejs)
 
-  - [Outros](#outros)
-
   - [APIs](#apis)
 
 ## Telas
