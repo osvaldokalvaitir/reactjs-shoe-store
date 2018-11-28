@@ -14,7 +14,7 @@ class Product extends Component {
 
         if (id) {
           const response = await api.get(`/products/${id}`);
-          this.setState({ product: response.data });        
+          this.setState({ product: response.data });
         }
     }
 
@@ -43,7 +43,7 @@ class Product extends Component {
                     title,
                     description,
                     color,
-                    size 
+                    size
                 });
             } else {
                 await api.put(`/products/${_id}`,
@@ -51,7 +51,7 @@ class Product extends Component {
                     title,
                     description,
                     color,
-                    size 
+                    size
                 });
             }
             this.props.history.push("/");
@@ -66,11 +66,11 @@ class Product extends Component {
 
         try {
             await api.delete(`/products/${_id}`);
-            this.props.history.push("/");            
+            this.props.history.push("/");
         }
         catch(err) {
             alert(`Não foi possível excluir o produto. Erro: ${err}`);
-        }   
+        }
     }
 
     render() {
@@ -90,22 +90,22 @@ class Product extends Component {
                     <label>
                         <p>Cor</p>
                         <input type="text" name="color" value={color} onChange={this.handleChange} />
-                    </label>                        
+                    </label>
                     <label>
                         <p>Tamanho</p>
                         <input type="text" name="size" value={size} onChange={this.handleChange} />
-                    </label>                    
+                    </label>
                 </form>
                 <div className="actions">
                     <button type="submit" onClick={this.handleSubmit}>
                         Salvar dados
                     </button>
-                    { (_id) 
+                    { (_id)
                         ? <button onClick={this.deleteProduct}>
                             Excluir produto
                           </button>
                         : null
-                    }                         
+                    }
                 </div>
             </div>
         );
