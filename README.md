@@ -25,11 +25,11 @@ Este projeto foi desenvolvido em React executando um CRUD na Node Express API, o
   - [Listagem](#listagem)
   - [Formulário](#formulario)
 
-- [Instalação e execução](#instalação-e-execução)
-
 - [Desenvolvimento](#desenvolvimento)
 
   - [Configurações Iniciais](#configurações-iniciais)
+
+  - [Instalação e execução](#instalação-e-execução)
 
   - [Bibliotecas do Node.js](#bibliotecas-do-nodejs)
 
@@ -61,7 +61,13 @@ Composto por: Cabeçalho e Formulário
 
 É um formulário onde é possível editar ou excluir o produto selecionado.
 
-## Instalação e execução
+## Desenvolvimento
+
+### Configurações Iniciais
+
+Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings) e siga as Configurações Iniciais.
+
+### Instalação e execução
 
 Depois de instalado o Node.js, abra o prompt de comando e dentro da pasta do projeto execute os comandos abaixo.
 
@@ -82,12 +88,6 @@ Construir e executar o projeto:
 ```
 npm run build | yarn run build
 ```
-
-## Desenvolvimento
-
-### Configurações Iniciais
-
-Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings) e siga as Configurações Iniciais.
 
 ### Bibliotecas do Node.js
 
