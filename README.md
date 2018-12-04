@@ -1,10 +1,10 @@
 # React Front
 
-Este projeto foi criado em React executando um CRUD na Node Express API.
+Este projeto foi criado em React executando um CRUD na [Node Express API](https://github.com/osvaldokalvaitir/node-express-api).
 
 ## Resumo
 
-Este projeto foi desenvolvido em React executando um CRUD na Node Express API, ou seja:
+Este projeto foi desenvolvido em React executando um CRUD na [Node Express API](https://github.com/osvaldokalvaitir/node-express-api), ou seja:
 
 - Busca todos os produtos
 - Busca somente dados de um produto selecionado
