@@ -17,13 +17,8 @@ Este projeto foi desenvolvido em React executando um CRUD na Node Express API, o
 - [Telas](#telas)
 
   - [Principal](#principal)
+  
   - [Produto](#produto)
-
-- [Componentes](#componentes)
-
-  - [Cabeçalho](#cabeçalho)
-  - [Listagem](#listagem)
-  - [Formulário](#formulario)
 
 - [Desenvolvimento](#desenvolvimento)
 
@@ -42,26 +37,10 @@ Este projeto foi desenvolvido em React executando um CRUD na Node Express API, o
 ### Principal
 
 É a tela onde estão todos os dados vindos da API, podendo adicionar novos dados.
-Composto por: Cabeçalho e Listagem
 
 ### Produto
 
 É a tela onde encontram-se os detalhes do produto selecionado, podendo editar ou excluir o produto.
-Composto por: Cabeçalho e Formulário
-
-## Componentes
-
-### Cabeçalho
-
-É a barra superior onde está o título do site.
-
-### Listagem
-
-É a lista onde encontram-se os dados vindos da API.
-
-### Formulário
-
-É um formulário onde é possível editar ou excluir o produto selecionado.
 
 ## Desenvolvimento
 
