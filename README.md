@@ -4,7 +4,7 @@ Aplicação em ReactJS executando um CRUD na [Node Express API](https://github.c
 
 ## Resumo
 
-Esta aplicação foi desenvolvida em React para consumir um CRUD na [Node Express API](https://github.com/osvaldokalvaitir/node-express-api), ou seja:
+Esta aplicação foi desenvolvida em ReactJS para consumir um CRUD na [Node Express API](https://github.com/osvaldokalvaitir/node-express-api), ou seja:
 
 - Busca todos os produtos
 - Busca somente dados de um produto selecionado
