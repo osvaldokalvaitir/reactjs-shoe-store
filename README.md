@@ -1,6 +1,6 @@
 # React Front
 
-Aplicação em React executando um CRUD na [Node Express API](https://github.com/osvaldokalvaitir/node-express-api).
+Aplicação em ReactJS executando um CRUD na [Node Express API](https://github.com/osvaldokalvaitir/node-express-api).
 
 ## Resumo
 
