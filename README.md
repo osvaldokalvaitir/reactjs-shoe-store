@@ -2,16 +2,6 @@
 
 Aplicação em ReactJS executando um CRUD na [Node Express API](https://github.com/osvaldokalvaitir/node-express-api).
 
-## Resumo
-
-Esta aplicação foi desenvolvida em ReactJS para consumir um CRUD na [Node Express API](https://github.com/osvaldokalvaitir/node-express-api), ou seja:
-
-- Busca todos os produtos
-- Busca somente dados de um produto selecionado
-- Adiciona novos produtos
-- Edita dados de produtos existentes
-- Exclui produtos existentes
-
 ## Índice
 
 - [Telas](#telas)
@@ -19,6 +9,8 @@ Esta aplicação foi desenvolvida em ReactJS para consumir um CRUD na [Node Expr
   - [Principal](#principal)
 
   - [Produto](#produto)
+
+- [Rotas](#rotas)
 
 - [Desenvolvimento](#desenvolvimento)
 
@@ -41,6 +33,14 @@ Esta aplicação foi desenvolvida em ReactJS para consumir um CRUD na [Node Expr
 ### Produto
 
 É a tela onde encontram-se os detalhes do produto selecionado, podendo editar ou excluir o produto.
+
+## Rotas
+
+- Busca todos os produtos
+- Busca somente dados de um produto selecionado
+- Adiciona novos produtos
+- Edita dados de produtos existentes
+- Exclui produtos existentes
 
 ## Desenvolvimento
 
