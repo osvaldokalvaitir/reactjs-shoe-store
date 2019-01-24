@@ -1,115 +1,110 @@
-import React, { Component } from "react";
-import api from "../../services/api";
-import { withRouter } from "react-router-dom";
+import React, { Component } from 'react';
 
-import "./styles.css";
+import api from '../../services/api';
+
+import './styles.css';
 
 class Product extends Component {
-    state = {
-        product: {}
+  state = {
+    product: {},
+  };
+
+  async componentDidMount() {
+    const { id } = this.props.match.params;
+
+    if (id) {
+      const response = await api.get(`/products/${id}`);
+      this.setState({ product: response.data });
     }
+  }
 
-    async componentDidMount() {
-        const { id } = this.props.match.params;
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const {
+      _id, title, description, color, size,
+    } = this.state.product;
 
-        if (id) {
-          const response = await api.get(`/products/${id}`);
-          this.setState({ product: response.data });
-        }
+    try {
+      if (!_id) {
+        await api.post('/products', {
+          title,
+          description,
+          color,
+          size,
+        });
+      } else {
+        await api.put(`/products/${_id}`, {
+          title,
+          description,
+          color,
+          size,
+        });
+      }
+      this.props.history.push('/');
+    } catch (err) {
+      alert(`Não foi possível salvar os dados. Erro: ${err}`);
     }
+  };
 
-    handleChange = (event) => {
-        const { name, value } = event.target;
+  deleteProduct = async () => {
+    const { _id } = this.state.product;
 
-        this.setState(prevState => ({
-            product: {
-                ...prevState.product,
-                [name]: value
-            }
-        }));
+    try {
+      await api.delete(`/products/${_id}`);
+      this.props.history.push('/');
+    } catch (err) {
+      alert(`Não foi possível excluir o produto. Erro: ${err}`);
     }
+  };
 
-    handleSubmit = async (event) => {
-        event.preventDefault();
+  handleInputTitleChange = e => this.setState({ product: { ...this.state.product, title: e.target.value } });
 
-        const { _id, title, description, color, size } = this.state.product;
+  handleInputDescriptionChange = e => this.setState({ product: { ...this.state.product, description: e.target.value } });
 
-        console.log(this.state.product);
+  handleInputColorChange = e => this.setState({ product: { ...this.state.product, color: e.target.value } });
 
-        try {
-            if (!_id) {
-                await api.post(`/products`,
-                {
-                    title,
-                    description,
-                    color,
-                    size
-                });
-            } else {
-                await api.put(`/products/${_id}`,
-                {
-                    title,
-                    description,
-                    color,
-                    size
-                });
-            }
-            this.props.history.push("/");
-        }
-        catch(err) {
-            alert(`Não foi possível salvar os dados. Erro: ${err}`);
-        }
-    }
+  handleInputSizeChange = e => this.setState({ product: { ...this.state.product, size: e.target.value } });
 
-    deleteProduct = async () => {
-        const { _id } = this.state.product;
+  render() {
+    const {
+      _id, title, description, color, size,
+    } = this.state.product || '';
 
-        try {
-            await api.delete(`/products/${_id}`);
-            this.props.history.push("/");
-        }
-        catch(err) {
-            alert(`Não foi possível excluir o produto. Erro: ${err}`);
-        }
-    }
+    return (
+      <div className="product-info">
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <p>Título</p>
+            <input type="text" name="title" value={title} onChange={this.handleInputTitleChange} />
+          </div>
+          <div>
+            <p>Descrição</p>
+            <input
+              type="text"
+              name="description"
+              value={description}
+              onChange={this.handleInputDescriptionChange}
+            />
+          </div>
+          <div>
+            <p>Cor</p>
+            <input type="text" name="color" value={color} onChange={this.handleInputColorChange} />
+          </div>
+          <div>
+            <p>Tamanho</p>
+            <input type="text" name="size" value={size} onChange={this.handleInputSizeChange} />
+          </div>
 
-    render() {
-        const { _id, title, description, color, size } = this.state.product || '';
-
-        return (
-            <div className="product-info">
-                <form>
-                    <label>
-                        <p>Título</p>
-                        <input type="text" name="title" value={title} onChange={this.handleChange} />
-                    </label>
-                    <label>
-                        <p>Descrição</p>
-                        <input type="text" name="description" value={description} onChange={this.handleChange} />
-                    </label>
-                    <label>
-                        <p>Cor</p>
-                        <input type="text" name="color" value={color} onChange={this.handleChange} />
-                    </label>
-                    <label>
-                        <p>Tamanho</p>
-                        <input type="text" name="size" value={size} onChange={this.handleChange} />
-                    </label>
-                </form>
-                <div className="actions">
-                    <button type="submit" onClick={this.handleSubmit}>
-                        Salvar dados
-                    </button>
-                    { (_id)
-                        ? <button onClick={this.deleteProduct}>
-                            Excluir produto
-                          </button>
-                        : null
-                    }
-                </div>
-            </div>
-        );
-    }
+          <div className="actions">
+            <button type="submit">
+              Salvar dados
+            </button>
+            {_id ? <button type="button" onClick={this.deleteProduct}>Excluir produto</button> : null}
+          </div>
+        </form>
+      </div>
+    );
+  }
 }
 
-export default withRouter(Product);
+export default Product;

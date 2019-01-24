@@ -28,10 +28,12 @@ Aplicação em ReactJS executando um CRUD na [Node Express API](https://github.c
 
 ### Principal
 
+![Main](/assets/main.png)
 É a tela onde estão todos os dados vindos da API, podendo adicionar novos dados.
 
 ### Produto
 
+![Product](/assets/product.png)
 É a tela onde encontram-se os detalhes do produto selecionado, podendo editar ou excluir o produto.
 
 ## Rotas
