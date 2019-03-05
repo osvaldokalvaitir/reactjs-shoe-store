@@ -8,6 +8,8 @@ Aplicação em ReactJS executando um CRUD na [Node Express API](https://github.c
 
   - [Principal](#principal)
 
+  - [Novo](#novo)
+
   - [Produto](#produto)
 
 - [Rotas](#rotas)
@@ -29,7 +31,12 @@ Aplicação em ReactJS executando um CRUD na [Node Express API](https://github.c
 ### Principal
 
 ![Main](/assets/main.png)
-É a tela onde estão todos os dados vindos da API, podendo adicionar novos dados.
+É a tela onde estão todos os produtos vindos da API, podendo acessar os produtos existentes e adicionar novos produtos.
+
+### Novo
+
+![New](/assets/new.png)
+Nesta tela é possível cadastrar um novo produto, preenchendo os dados necessários e salvando.
 
 ### Produto
 
