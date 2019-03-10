@@ -45,7 +45,7 @@ class Main extends Component {
   };
 
   addProduct = () => {
-    this.props.history.push('/products');
+    this.props.history.push('/products/create');
   };
 
   render() {
@@ -62,7 +62,7 @@ class Main extends Component {
           <article key={product._id}>
             <strong>{product.title}</strong>
             <p>{product.description}</p>
-            <Link to={`/products/${product._id}`}>Acessar</Link>
+            <Link to={`/products/edit/${product._id}`}>Acessar</Link>
           </article>
         ))}
         <div className="actions">
