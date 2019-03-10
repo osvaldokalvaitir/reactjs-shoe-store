@@ -1,6 +1,6 @@
-# ReactJS Front
+# ReactJS - Front
 
-Aplicação em ReactJS executando um CRUD na [Node Express API](https://github.com/osvaldokalvaitir/node-express-api).
+Aplicação em ReactJS executando um CRUD na [Node - Express API](https://github.com/osvaldokalvaitir/node-express-api).
 
 ## Índice
 
@@ -87,4 +87,4 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 ### APIs
 
-- [Node Express API](https://github.com/osvaldokalvaitir/node-express-api)
+- [Node - Express API](https://github.com/osvaldokalvaitir/node-express-api)
