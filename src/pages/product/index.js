@@ -1,38 +1,66 @@
 import React, { Component } from 'react';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 
 import api from '../../services/api';
 
 import './styles.css';
 
 class Product extends Component {
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        id: PropTypes.string,
+      }),
+    }).isRequired,
+    history: PropTypes.shape({
+      push: PropTypes.func.isRequired,
+    }).isRequired,
+    values: PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+      color: PropTypes.string,
+      size: PropTypes.number,
+    }).isRequired,
+    errors: PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+      color: PropTypes.string,
+      size: PropTypes.number,
+    }).isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    handleChange: PropTypes.func.isRequired,
+  };
+
   async componentDidMount() {
     const { id } = this.props.match.params;
 
     if (id) {
       const response = await api.get(`/products/${id}`);
-      // response.data
+      // enviar o response.data para o mapPropsToValues
     }
   };
 
-  // deleteProduct = async () => {
-  //   const { _id } = this.state.product;
+  deleteProduct = async () => {
+    const { id } = this.props.match.params;
+    const { push } = this.props.history;
 
-  //   try {
-  //     await api.delete(`/products/${_id}`);
-  //     this.props.history.push('/');
-  //   } catch (err) {
-  //     alert(`Não foi possível excluir o produto. Erro: ${err}`);
-  //   }
-  // };
+    try {
+      await api.delete(`/products/${id}`);
+      push('/');
+    } catch (err) {
+      alert(`Não foi possível excluir o produto. Erro: ${err}`);
+    }
+  };
 
   render() {
-    console.log(this.props);
-
     const {
       handleSubmit, errors, values, handleChange,
     } = this.props;
+    const {
+      id,
+    } = this.props.match.params;
 
     return (
       <div className="product-info">
@@ -70,7 +98,7 @@ class Product extends Component {
           <div>
             <input
               placeholder="Tamanho"
-              type="text"
+              type="number"
               name="size"
               value={values.size}
               onChange={handleChange}
@@ -80,11 +108,11 @@ class Product extends Component {
 
           <div className="actions">
             <button type="submit">Salvar dados</button>
-            {/* {this.props.match.params._id ? (
+            {id ? (
               <button type="button" onClick={this.deleteProduct}>
                 Excluir produto
               </button>
-            ) : null} */}
+            ) : null}
           </div>
         </form>
       </div>
@@ -93,15 +121,12 @@ class Product extends Component {
 }
 
 export default withFormik({
-  mapPropsToValues: (props) => (
-    console.log(props)
-  //   {
-  //   title: '',
-  //   description: '',
-  //   color: '',
-  //   size: '',
-  // }
-  ),
+  mapPropsToValues: () => ({
+    title: '',
+    description: '',
+    color: '',
+    size: 0,
+  }),
 
   validateOnChange: false,
   validateOnBlur: false,
@@ -114,15 +139,13 @@ export default withFormik({
   }),
 
   handleSubmit: async (values, { props }) => {
-    console.log(props);
+    const { id } = props.match.params;
 
-    // const { _id } = props.match.params;
-
-    // try {
-    //   await api.postOrPut('products', _id, values);
-    //   this.props.history.push('/');
-    // } catch (err) {
-    //   alert(`Não foi possível salvar os dados. Erro: ${err}`);
-    // }
+    try {
+      await api.postOrPut('products', id, values);
+      props.history.push('/');
+    } catch (err) {
+      alert(`Não foi possível salvar os dados. Erro: ${err}`);
+    }
   },
 })(Product);
