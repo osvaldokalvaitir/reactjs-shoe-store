@@ -34,10 +34,6 @@ class Product extends Component {
     handleChange: PropTypes.func.isRequired,
   };
 
-  state = {
-    values: {},
-  };
-
   deleteProduct = async () => {
     const { id } = this.props.match.params;
     const { push } = this.props.history;
@@ -120,17 +116,21 @@ export default compose(
       if (id) {
         const product = await api.get(`/products/${id}`);
 
-        this.setState({ values: product.data });
+        this.setState({ ...product.data });
       }
     },
   }),
 
   withFormik({
-    mapPropsToValues: ({ values }) => ({
-      title: 'osvaldo',
-      description: 'kalvaitir',
-      color: 'preto',
-      size: 40,
+    enableReinitialize: true,
+
+    mapPropsToValues: ({
+      title, description, color, size,
+    }) => ({
+      title: title || '',
+      description: description || '',
+      color: color || '',
+      size: (size && size.valueOf()) || 0,
     }),
 
     validateOnChange: false,
