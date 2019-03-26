@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withFormik } from 'formik';
+import { compose, lifecycle } from 'recompose';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 
@@ -33,13 +34,8 @@ class Product extends Component {
     handleChange: PropTypes.func.isRequired,
   };
 
-  async componentDidMount() {
-    const { id } = this.props.match.params;
-
-    if (id) {
-      const response = await api.get(`/products/${id}`);
-      // enviar o response.data para o mapPropsToValues
-    }
+  state = {
+    values: {},
   };
 
   deleteProduct = async () => {
@@ -55,12 +51,8 @@ class Product extends Component {
   };
 
   render() {
-    const {
-      handleSubmit, errors, values, handleChange,
-    } = this.props;
-    const {
-      id,
-    } = this.props.match.params;
+    const { handleSubmit, errors, handleChange, values } = this.props;
+    const { id } = this.props.match.params;
 
     return (
       <div className="product-info">
@@ -120,32 +112,46 @@ class Product extends Component {
   }
 }
 
-export default withFormik({
-  mapPropsToValues: () => ({
-    title: '',
-    description: '',
-    color: '',
-    size: 0,
+export default compose(
+  lifecycle({
+    async componentDidMount() {
+      const { id } = this.props.match.params;
+
+      if (id) {
+        const product = await api.get(`/products/${id}`);
+
+        this.setState({ values: product.data });
+      }
+    },
   }),
 
-  validateOnChange: false,
-  validateOnBlur: false,
+  withFormik({
+    mapPropsToValues: ({ values }) => ({
+      title: 'osvaldo',
+      description: 'kalvaitir',
+      color: 'preto',
+      size: 40,
+    }),
 
-  validationSchema: Yup.object().shape({
-    title: Yup.string().required('Campo obrigatório'),
-    description: Yup.string().required('Campo obrigatório'),
-    color: Yup.string().required('Campo obrigatório'),
-    size: Yup.number().required('Campo obrigatório'),
+    validateOnChange: false,
+    validateOnBlur: false,
+
+    validationSchema: Yup.object().shape({
+      title: Yup.string().required('Campo obrigatório'),
+      description: Yup.string().required('Campo obrigatório'),
+      color: Yup.string().required('Campo obrigatório'),
+      size: Yup.number().required('Campo obrigatório'),
+    }),
+
+    handleSubmit: async (values, { props }) => {
+      const { id } = props.match.params;
+
+      try {
+        await api.postOrPut('products', id, values);
+        props.history.push('/');
+      } catch (err) {
+        alert(`Não foi possível salvar os dados. Erro: ${err}`);
+      }
+    },
   }),
-
-  handleSubmit: async (values, { props }) => {
-    const { id } = props.match.params;
-
-    try {
-      await api.postOrPut('products', id, values);
-      props.history.push('/');
-    } catch (err) {
-      alert(`Não foi possível salvar os dados. Erro: ${err}`);
-    }
-  },
-})(Product);
+)(Product);
