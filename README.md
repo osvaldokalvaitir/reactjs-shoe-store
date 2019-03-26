@@ -95,6 +95,8 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 - [react-router-dom](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-router-dom.md)
 
+- [recompose](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/recompose.md)
+
 - [Yup](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/yup.md)
 
 ### APIs
