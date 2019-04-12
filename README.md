@@ -55,11 +55,13 @@ Nesta tela é possível cadastrar um novo produto, preenchendo os dados necessá
 
 ## Rotas
 
-- Busca todos os produtos
-- Busca somente dados de um produto selecionado
-- Adiciona novos produtos
-- Edita dados de produtos existentes
-- Exclui produtos existentes
+- Produtos
+
+  - Busca todos os produtos
+  - Busca somente dados de um produto selecionado
+  - Adiciona novos produtos
+  - Edita dados de produtos existentes
+  - Exclui produtos existentes
 
 ## Desenvolvimento
 
