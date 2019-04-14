@@ -14,15 +14,13 @@ Aplicação em ReactJS executando um CRUD na [Node - Express API](https://github
 
 ## Índice
 
-- [Telas](#telas)
+- [Capturas de Tela](#capturas-de-tela)
 
   - [Principal](#principal)
 
   - [Novo](#novo)
 
   - [Produto](#produto)
-
-- [Rotas](#rotas)
 
 - [Desenvolvimento](#desenvolvimento)
 
@@ -32,11 +30,13 @@ Aplicação em ReactJS executando um CRUD na [Node - Express API](https://github
 
   - [Execução do Projeto](#execução-do-projeto)
 
+- [Utilizados no Projeto](#utilizados-no-projeto)
+
   - [Bibliotecas](#bibliotecas)
 
   - [APIs](#apis)
 
-## Telas
+## Capturas de Tela
 
 ### Principal
 
@@ -53,16 +53,6 @@ Nesta tela é possível cadastrar um novo produto, preenchendo os dados necessá
 ![Product](/assets/product.png)
 É a tela onde encontram-se os detalhes do produto selecionado, podendo editar ou excluir o produto.
 
-## Rotas
-
-- Produtos
-
-  - Busca todos os produtos
-  - Busca somente dados de um produto selecionado
-  - Adiciona novos produtos
-  - Edita dados de produtos existentes
-  - Exclui produtos existentes
-
 ## Desenvolvimento
 
 ### Configurações Iniciais
@@ -76,6 +66,8 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 ### Execução do Projeto
 
 Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/create-react-app.md) e siga a Execução de Projeto.
+
+## Utilizados no Projeto
 
 ### Bibliotecas
 
@@ -103,4 +95,14 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 ### APIs
 
-- [Node - Express API](https://github.com/osvaldokalvaitir/node-express-api)
+- **[Node - Express API](https://github.com/osvaldokalvaitir/node-express-api)**
+
+  - **Rotas**
+
+    - Produtos
+
+      - Busca todos os produtos
+      - Busca somente dados de um produto selecionado
+      - Adiciona novos produtos
+      - Edita dados de produtos existentes
+      - Exclui produtos existentes
