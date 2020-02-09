@@ -40,17 +40,17 @@ Aplicação usando Create React App, Axios, React Router, Formik, Yup, ESLint e 
 
 ### Principal
 
-![Main](/assets/main.png)
+![Main](/.github/assets/main.png)
 É a tela onde estão todos os produtos vindos da API, podendo acessar os produtos existentes e adicionar novos produtos.
 
 ### Novo
 
-![New](/assets/new.png)
+![New](/.github/assets/new.png)
 Nesta tela é possível cadastrar um novo produto, preenchendo os dados necessários e salvando.
 
 ### Produto
 
-![Product](/assets/product.png)
+![Product](/.github/assets/product.png)
 É a tela onde encontram-se os detalhes do produto selecionado, podendo editar ou excluir o produto.
 
 ## Desenvolvimento
