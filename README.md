@@ -10,7 +10,7 @@
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 ![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 
-Aplicação usando Create React App, Axios, React Router, Formik, Yup, ESLint e prop-types executando um CRUD na [Node - Express API](https://github.com/osvaldokalvaitir/node-express-api).
+Aplicação usando Create React App, Axios, React Router, Formik, Yup, ESLint e prop-types executando um CRUD na [Node.js - Express API](https://github.com/osvaldokalvaitir/nodejs-express-api).
 
 ## Índice
 
@@ -95,7 +95,7 @@ Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/
 
 ### APIs
 
-- **[Node - Express API](https://github.com/osvaldokalvaitir/node-express-api)**
+- **[Node.js - Express API](https://github.com/osvaldokalvaitir/nodejs-express-api)**
 
   - **Rotas**
 
