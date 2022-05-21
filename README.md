@@ -9,7 +9,7 @@
 </h3>
 
 <p align="center">
-  :athletic_shoe: Shoe Store Application using Create React App, Axios, React Router, Formik, Yup, ESLint, prop-types and consuming the features of the Node.js - Shoe Store API
+  :athletic_shoe: Shoe Store Application using Create React App, Axios, React Router, Formik, Yup, ESLint, prop-types and running a CRUD in the Node.js - Shoe Store API
 </p>
 
 <p align="center">
