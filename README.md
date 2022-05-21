@@ -1,108 +1,63 @@
-# ReactJS - Front
+<h1 align="center">
+    <img src="/.github/assets/logo.png"
+    width="200px"
+    alt="Logo" />
+</h1>
 
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/osvaldokalvaitir/reactjs-front/blob/master/LICENSE)
-![](https://img.shields.io/github/package-json/v/osvaldokalvaitir/reactjs-front.svg)
-![](https://img.shields.io/github/last-commit/osvaldokalvaitir/reactjs-front.svg?color=red)
-![](https://img.shields.io/github/languages/top/osvaldokalvaitir/reactjs-front.svg?color=yellow)
-![](https://img.shields.io/github/languages/count/osvaldokalvaitir/reactjs-front.svg?color=lightgrey)
-![](https://img.shields.io/github/languages/code-size/osvaldokalvaitir/reactjs-front.svg)
-![](https://img.shields.io/github/repo-size/osvaldokalvaitir/reactjs-front.svg?color=blueviolet)
-[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
-![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
+<h3 align="center">
+  ReactJS - Shoe Store
+</h3>
 
-Aplicação usando Create React App, Axios, React Router, Formik, Yup, ESLint e prop-types executando um CRUD na [Node.js - Express API](https://github.com/osvaldokalvaitir/nodejs-express-api).
+<p align="center">
+  :athletic_shoe: Shoe Store Application using Create React App, Axios, React Router, Formik, Yup, ESLint, prop-types and consuming the features of the Node.js - Shoe Store API
+</p>
 
-## Índice
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osvaldokalvaitir/reactjs-shoe-store.svg?color=00A83A">
 
-- [Capturas de Tela](#capturas-de-tela)
+  <img alt="GitHub language top" src="https://img.shields.io/github/languages/top/osvaldokalvaitir/reactjs-shoe-store.svg?color=00A83A">
 
-  - [Principal](#principal)
+  <a href="https://kalvaitir.com/">
+    <img alt="Made by Kalvaitir" src="https://img.shields.io/badge/made%20by-Kalvaitir-00A83A">
+  </a>
 
-  - [Novo](#novo)
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-00A83A">
+</p>
 
-  - [Produto](#produto)
+<p align="center">
+  <a href="#computer-demo">Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#wrench-install-and-run">Install and run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#memo-license">License</a>
+</p>
 
-- [Desenvolvimento](#desenvolvimento)
+## :computer: Demo
 
-  - [Configuração do Ambiente](#configuração-do-ambiente)
+![Demo](/.github/assets/demo.gif)
 
-  - [Instalação do Projeto](#instalação-do-projeto)
+## :wrench: Install and run
 
-  - [Execução do Projeto](#execução-do-projeto)
+_ps: Before running the app, start the [Node.js - Shoe Store](https://github.com/osvaldokalvaitir/nodejs-shoe-store) backend._
 
-- [Utilizados no Projeto](#utilizados-no-projeto)
+Open terminal:
 
-  - [Bibliotecas](#bibliotecas)
+```sh
+# Clone this repo
+git clone https://github.com/osvaldokalvaitir/reactjs-shoe-store
 
-  - [APIs](#apis)
+# Entry in folder
+cd reactjs-shoe-store
 
-## Capturas de Tela
+# Install deps with npm or yarn
+npm install | yarn
 
-### Principal
+# Launch the app with npm or yarn
+npm start | yarn start
+```
 
-![Main](/.github/assets/main.png)
-É a tela onde estão todos os produtos vindos da API, podendo acessar os produtos existentes e adicionar novos produtos.
+## :memo: License
 
-### Novo
+This project is under the MIT license. See [LICENSE](/LICENSE) for more information.
 
-![New](/.github/assets/new.png)
-Nesta tela é possível cadastrar um novo produto, preenchendo os dados necessários e salvando.
+---
 
-### Produto
-
-![Product](/.github/assets/product.png)
-É a tela onde encontram-se os detalhes do produto selecionado, podendo editar ou excluir o produto.
-
-## Desenvolvimento
-
-### Configuração do Ambiente
-
-Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/README.md) e siga `Configuração de Ambiente`.
-
-### Instalação do Projeto
-
-Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/nodejs.md) e siga `Instalação de Projeto`.
-
-### Execução do Projeto
-
-Clique [aqui](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/create-react-app.md) e siga `Execução de Projeto para Desenvolvimento` ou `Construção e Execução de Projeto para Produção`.
-
-## Utilizados no Projeto
-
-### Bibliotecas
-
-- [Axios](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/axios.md)
-
-- [Create React App](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/create-react-app.md)
-
-- [eslint-config-airbnb](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-config-airbnb.md)
-
-- [eslint-plugin-import](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-plugin-import.md)
-
-- [eslint-plugin-jsx-a11y](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-plugin-jsx-a11y.md)
-
-- [eslint-plugin-react](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/eslint-plugin-react.md)
-
-- [Formik](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/formik.md)
-
-- [prop-types](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/prop-types.md)
-
-- [react-router-dom](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/react-router-dom.md)
-
-- [recompose](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/recompose.md)
-
-- [Yup](https://github.com/osvaldokalvaitir/projects-settings/blob/master/nodejs/libs/yup.md)
-
-### APIs
-
-- **[Node.js - Express API](https://github.com/osvaldokalvaitir/nodejs-express-api)**
-
-  - **Rotas**
-
-    - Produtos
-
-      - Adiciona novos produtos
-      - Busca todos os produtos
-      - Busca somente dados de um produto selecionado
-      - Edita dados de produtos existentes
-      - Exclui produtos existentes
+<p align="center">
+Developed with 💚 by <a href="https://www.linkedin.com/in/osvaldokalvaitir">Osvaldo Kalvaitir Filho</a>
+</p>
